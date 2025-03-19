@@ -11,6 +11,7 @@
 <body>
   <h1>Push-Up Tracker</h1>
   
+  <!-- MAIN WORKPUT CONTAINER -->
   <div class="workout-container">
     <div id="workout-display">
       <div class="set-label">Set <span id="current-set">1</span> of <span id="total-sets">5</span></div>
@@ -24,6 +25,16 @@
       <button id="complete-btn">Complete Set</button>
     </div>
     
+    <!-- SELECT WORKOUT -->
+    <div class="workout-selection" id="workout-selection">
+        <div class="set-label">Select Workout:</div>
+        <div class="workout-buttons">
+        <button class="workout-select-btn" data-workout="beginner">Beginner</button>
+        <button class="workout-select-btn" data-workout="intermediate">Intermediate</button>
+        <button class="workout-select-btn" data-workout="advanced">Advanced</button>
+        </div>
+    </div>
+
     <div id="rest-display" class="hidden">
       <div class="set-label">Rest Time</div>
       <div class="timer-display" id="timer-display">60</div>
@@ -42,6 +53,8 @@
       <button id="new-workout-btn" class="reset-btn">Start New Workout</button>
     </div>
   </div>
+
+  
 
   <script src="js/main.js"></script>
 </body>

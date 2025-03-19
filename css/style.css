@@ -30,6 +30,21 @@ padding: 20px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.workout-buttons {
+    display: flex;
+}
+
+.workout-select-btn {
+    width: 33%;
+    padding: 15px 0;
+    font-size: 1em;
+    margin: 0 4px;
+}
+
+.workout-select-btn:focus {
+    background-color: red;
+}
+
 .set-display {
 font-size: 5rem;
 font-weight: bold;
