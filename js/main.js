@@ -2,15 +2,15 @@
 const workoutOptions = {
   beginner: {
     name: "Beginner",
-    sets: [8, 6, 4, 4, 3]
+    sets: [20, 14, 18, 12, 12]
   },
   intermediate: {
     name: "Intermediate",
-    sets: [15, 12, 10, 8, 5]
+    sets: [24, 18, 18, 12, 8]
   },
   advanced: {
     name: "Advanced",
-    sets: [20, 18, 15, 12, 10]
+    sets: [26, 20, 14, 12, 10]
   }
 };
 
