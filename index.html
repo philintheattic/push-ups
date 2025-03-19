@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="static/icon-512.png">
+  <title>Push-Up Tracker</title>
+</head>
+<body>
+  <h1>Push-Up Tracker</h1>
+  
+  <div class="workout-container">
+    <div id="workout-display">
+      <div class="set-label">Set <span id="current-set">1</span> of <span id="total-sets">5</span></div>
+      <div class="set-display" id="reps-display">20</div>
+      <div>Push-Ups</div>
+      
+      <div class="progress-container" id="progress-dots">
+        <!-- Progress dots will be added dynamically -->
+      </div>
+      
+      <button id="complete-btn">Complete Set</button>
+    </div>
+    
+    <div id="rest-display" class="hidden">
+      <div class="set-label">Rest Time</div>
+      <div class="timer-display" id="timer-display">60</div>
+      <div>Seconds Remaining</div>
+      <button id="skip-btn">Skip Rest</button>
+    </div>
+    
+    <div id="workout-complete" class="hidden">
+      <h2>Workout Complete!</h2>
+      <p>Great job completing today's push-up routine!</p>
+      <div class="workout-stats">
+        <div class="stats-title">Workout Summary:</div>
+        <div>Total Push-Ups: <span id="total-pushups">0</span></div>
+        <div>Time Elapsed: <span id="total-time">0:00</span></div>
+      </div>
+      <button id="new-workout-btn" class="reset-btn">Start New Workout</button>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

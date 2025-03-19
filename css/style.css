@@ -1,0 +1,117 @@
+:root {
+--primary-color: #4CAF50;
+--primary-dark: #388E3C;
+--secondary-color: #FF5722;
+--light-bg: #f5f5f5;
+--dark-text: #333;
+}
+
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+margin: 0;
+padding: 0;
+background-color: var(--light-bg);
+color: var(--dark-text);
+text-align: center;
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+}
+
+h1 {
+color: var(--primary-dark);
+margin-bottom: 30px;
+}
+
+.workout-container {
+background-color: white;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.set-display {
+font-size: 5rem;
+font-weight: bold;
+margin: 20px 0;
+color: var(--primary-color);
+}
+
+.set-label {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}
+
+.timer-display {
+font-size: 3rem;
+margin: 20px 0;
+color: var(--secondary-color);
+}
+
+.progress-container {
+display: flex;
+justify-content: space-between;
+margin: 20px 0;
+}
+
+.progress-dot {
+width: 15px;
+height: 15px;
+border-radius: 50%;
+background-color: #ddd;
+}
+
+.progress-dot.completed {
+background-color: var(--primary-color);
+}
+
+.progress-dot.active {
+background-color: var(--secondary-color);
+}
+
+button {
+background-color: var(--primary-color);
+color: white;
+border: none;
+padding: 15px 30px;
+font-size: 1.2rem;
+border-radius: 5px;
+cursor: pointer;
+margin: 10px 0;
+width: 100%;
+transition: background-color 0.2s;
+}
+
+button:hover {
+background-color: var(--primary-dark);
+}
+
+button:disabled {
+background-color: #cccccc;
+cursor: not-allowed;
+}
+
+.reset-btn {
+background-color: #f44336;
+margin-top: 30px;
+}
+
+.reset-btn:hover {
+background-color: #d32f2f;
+}
+
+.workout-stats {
+margin-top: 20px;
+text-align: left;
+padding: 15px;
+border-top: 1px solid #ddd;
+}
+
+.stats-title {
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.hidden {
+display: none;
+}
