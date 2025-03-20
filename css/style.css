@@ -30,6 +30,10 @@ padding: 20px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.workout-selection{
+    margin-bottom: 4px;
+}
+
 .workout-buttons {
     display: flex;
 }
@@ -38,6 +42,11 @@ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 33%;
     padding: 15px 0;
     font-size: 1em;
+    margin: 0 4px;
+}
+
+.workout-custom-btn{
+    width: 50%;
     margin: 0 4px;
 }
 

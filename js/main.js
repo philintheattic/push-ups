@@ -33,6 +33,7 @@ let workoutEndTime = null;
 // DOM Elements
 const workoutSelection = document.getElementById('workout-selection');
 const workoutDisplay = document.getElementById('workout-display');
+const workoutCustom = document.getElementById('workout-custom');
 const restDisplay = document.getElementById('rest-display');
 const workoutCompleteDisplay = document.getElementById('workout-complete');
 const currentSetEl = document.getElementById('current-set');
@@ -45,6 +46,8 @@ const skipBtn = document.getElementById('skip-btn');
 const newWorkoutBtn = document.getElementById('new-workout-btn');
 const totalPushupsEl = document.getElementById('total-pushups');
 const totalTimeEl = document.getElementById('total-time');
+const increaseBtn = document.getElementById('increase-btn');
+const decreaseBtn = document.getElementById('decrease-btn');
 
 // Initialize the app
 function initApp() {
@@ -72,6 +75,8 @@ function initApp() {
   completeBtn.addEventListener('click', completeSet);
   skipBtn.addEventListener('click', skipRest);
   newWorkoutBtn.addEventListener('click', startNewWorkout);
+  increaseBtn.addEventListener('click', increaseSet);
+  decreaseBtn.addEventListener('click', decreaseSet)
   
   // Record start time
   workoutStartTime = new Date();
@@ -113,6 +118,7 @@ function completeSet() {
   workoutDisplay.classList.add('hidden');
   restDisplay.classList.remove('hidden');
   workoutSelection.classList.add('hidden');
+  workoutCustom.classList.add('hidden');
   
   isResting = true;
   restTimeRemaining = restTimeSeconds;
@@ -187,8 +193,19 @@ function startNewWorkout() {
   workoutCompleteDisplay.classList.add('hidden');
   workoutDisplay.classList.remove('hidden');
   workoutSelection.classList.remove('hidden');
+  workoutCustom.classList.remove('hidden');
   updateSetDisplay();
   createProgressDots(); // Recreate progress dots in case set count changed
+}
+
+function increaseSet(){
+  pushupSets = pushupSets.map(i => ++i);
+  updateSetDisplay();
+}
+
+function decreaseSet(){
+  pushupSets = pushupSets.map(i => --i);
+  updateSetDisplay();
 }
 
 function initializePWA() {
