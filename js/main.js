@@ -20,7 +20,7 @@ const workoutOptions = {
 let selectedWorkout = "intermediate";
 let pushupSets = [...workoutOptions[selectedWorkout].sets];
 // const pushupSets = [15, 12, 10, 8, 5]; // Push-ups per set
-const restTimeSeconds = 60; // Rest time between sets
+const restTimeSeconds = 90; // Rest time between sets
 
 // State variables
 let currentSetIndex = 0;
