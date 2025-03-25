@@ -114,6 +114,12 @@ function updateSetDisplay() {
 }
 
 function completeSet() {
+  // if we're on the last set, skip the timer and go straight to the end results
+  if (currentSetIndex == pushupSets.length-1) {
+    skipRest()
+    return
+  }
+
   // Show rest timer
   workoutDisplay.classList.add('hidden');
   restDisplay.classList.remove('hidden');
